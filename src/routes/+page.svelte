@@ -642,13 +642,35 @@
 		justify-content: center;
 	}
 
-	/* Glass orbit ring */
+	/* Glass orbit ring — pulsing wave effect */
 	.orbit-ring {
 		position: absolute;
 		inset: 0;
 		border-radius: 50%;
 		border: 1px solid var(--border);
 		background: transparent;
+		animation: ring-pulse 3s ease-in-out infinite;
+		box-shadow:
+			0 0 0 1px var(--border),
+			0 0 18px 2px var(--accent-dim),
+			0 0 40px 6px rgba(0, 102, 176, 0.06);
+	}
+
+	@keyframes ring-pulse {
+		0%, 100% {
+			box-shadow:
+				0 0 0 1px var(--border),
+				0 0 14px 1px var(--accent-dim),
+				0 0 30px 4px rgba(0, 102, 176, 0.05);
+			border-color: var(--border);
+		}
+		50% {
+			box-shadow:
+				0 0 0 1px var(--accent),
+				0 0 28px 4px var(--accent-dim),
+				0 0 60px 10px rgba(0, 102, 176, 0.12);
+			border-color: var(--accent);
+		}
 	}
 
 	/* Spinning orbit wrapper — this orbits all logos around the center */
@@ -688,10 +710,14 @@
 		align-items: center;
 		gap: 0.3rem;
 		padding: 0.5rem 0.6rem;
-		background: transparent;
+		background: var(--bg-elevated);
 		border: 1px solid var(--border);
 		border-radius: var(--radius-md);
 		white-space: nowrap;
+		box-shadow:
+			0 0 0 1px rgba(255,255,255,0.04),
+			0 8px 32px rgba(0, 0, 0, 0.12),
+			0 2px 8px rgba(0, 0, 0, 0.08);
 	}
 	/* Counter-rotate each chip so label stays upright as it orbits */
 	.a0   .orbit-logo-chip { transform: rotate(0deg);   }
@@ -828,6 +854,11 @@
 		.a240 { top: 21px;  left: 38px;  }
 		.a300 { top: 21px;  left: 147px; }
 		.orbit-anim { transform-origin: 130px 130px; }
+		/* On mobile: simpler ring, no shadow pulse */
+		.orbit-ring {
+			box-shadow: none !important;
+			animation: none !important;
+		}
 		/* On mobile: no background/border on chips, pure icon */
 		.orbit-logo-chip {
 			background: transparent !important;
@@ -841,11 +872,18 @@
 	/* Dark theme orbit overrides */
 	:global([data-theme="dark"]) .orbit-ring {
 		border-color: rgba(255,255,255,0.06);
+		box-shadow:
+			0 0 0 1px rgba(255,255,255,0.04),
+			0 0 18px 2px rgba(249, 115, 22, 0.12),
+			0 0 40px 6px rgba(249, 115, 22, 0.06);
 	}
 	:global([data-theme="dark"]) .orbit-logo-chip {
-		background: transparent;
+		background: var(--bg-elevated);
 		border-color: rgba(255,255,255,0.08);
-		box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+		box-shadow:
+			0 0 0 1px rgba(255,255,255,0.05),
+			0 8px 32px rgba(0,0,0,0.5),
+			0 2px 8px rgba(0,0,0,0.3);
 	}
 	:global([data-theme="dark"]) .orbit-logo-name {
 		color: rgba(255,255,255,0.5);

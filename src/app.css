@@ -1,27 +1,27 @@
 /* ============================================================
-   DESIGN TOKENS — Dark Theme (default)
+   DESIGN TOKENS — Light Theme (default)
    ============================================================ */
 :root {
-	/* Backgrounds — warm near-black */
-	--bg: #0A0A0F;
-	--bg-surface: #111118;
-	--bg-elevated: #16161F;
+	/* Backgrounds — clean white */
+	--bg: #FFFFFF;
+	--bg-surface: #F8F8F6;
+	--bg-elevated: #FFFFFF;
 
-	/* Borders — subtle, slightly warm */
-	--border: #1C1C26;
-	--border-light: #2A2A3A;
+	/* Borders */
+	--border: #E8E8E0;
+	--border-light: #F0F0EC;
 
 	/* Text */
-	--text: #EAEAF0;
-	--text-muted: #6868A0;
-	--text-dim: #4A4A60;
+	--text: #1A1A24;
+	--text-muted: #6B6B80;
+	--text-dim: #A8A8B8;
 
-	/* Accent — warm orange, energetic */
-	--accent: #F97316;
-	--accent-dim: rgba(249, 115, 22, 0.12);
-	--accent-hover: #FBBF24;
+	/* Accent — refined blue */
+	--accent: #0066B0;
+	--accent-dim: rgba(0, 102, 176, 0.1);
+	--accent-hover: #005090;
 
-	/* Fonts — editorial/academic feel */
+	/* Fonts */
 	--font-head: 'Newsreader', Georgia, serif;
 	--font-body: 'Figtree', system-ui, sans-serif;
 	--font-mono: 'JetBrains Mono', monospace;
@@ -42,20 +42,20 @@
 }
 
 /* ============================================================
-   LIGHT THEME
+   DARK THEME
    ============================================================ */
-:root[data-theme="light"] {
-	--bg: #F6F4EE;
-	--bg-surface: #FFFFFF;
-	--bg-elevated: #EFEDE6;
-	--border: #D8D4C8;
-	--border-light: #E8E4D8;
-	--text: #1C1C24;
-	--text-muted: #606078;
-	--text-dim: #9898A8;
-	--accent: #EA580C;
-	--accent-dim: rgba(234, 88, 12, 0.1);
-	--accent-hover: #F97316;
+:root[data-theme="dark"] {
+	--bg: #0A0A0F;
+	--bg-surface: #111118;
+	--bg-elevated: #16161F;
+	--border: #1C1C26;
+	--border-light: #252530;
+	--text: #F0F0F8;
+	--text-muted: #6868A0;
+	--text-dim: #4A4A60;
+	--accent: #F97316;
+	--accent-dim: rgba(249, 115, 22, 0.12);
+	--accent-hover: #FBBF24;
 }
 
 /* ============================================================

@@ -4,8 +4,8 @@ import { browser } from '$app/environment';
 const STORAGE_KEY = 'portfolio-theme';
 
 function createThemeStore() {
-	// Default to dark
-	const initial = browser ? (localStorage.getItem(STORAGE_KEY) || 'dark') : 'dark';
+	// Default to light
+	const initial = browser ? (localStorage.getItem(STORAGE_KEY) || 'light') : 'light';
 
 	const { subscribe, set, update } = writable(initial);
 

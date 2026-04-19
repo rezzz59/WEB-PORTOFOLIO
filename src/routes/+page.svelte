@@ -157,8 +157,55 @@
      HERO
 ══════════════════════════════════════════════ -->
 <section id="hero" class="hero-section">
-	<!-- Two-column: left=orbit, right=text+stats -->
+	<!-- Left: text + stats -->
+	<div class="hero-left">
+<div class="hero-orbit-col">
+		<div class="hero-text">
+			<div class="section-tag reveal">
+				<span class="hero-label-dot"></span>
+				Portfolio
+			</div>
+			<h1 class="hero-title reveal" style="transition-delay:60ms">
+				ML Engineer &<br/>
+				<em>Data Scientist.</em>
+			</h1>
+			<p class="hero-sub reveal" style="transition-delay:120ms">
+				I build end-to-end machine learning systems — from data pipelines and model training
+				to production deployment. Turning raw data into decisions at scale.
+			</p>
+			<div class="hero-cta reveal" style="transition-delay:180ms">
+				<a href="#projects" class="btn-primary">
+					View Projects
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+				<a href="#contact" class="btn-ghost">Get in Touch</a>
+			</div>
+		</div>
+		<!-- Hero stats -->
+		<div class="hero-stats reveal-stagger" style="transition-delay:240ms">
+			<div class="stat-card">
+				<span class="stat-num" data-target="4">0</span><span class="stat-suffix">+</span>
+				<span class="stat-label">Years Experience</span>
+			</div>
+			<div class="stat-card">
+				<span class="stat-num" data-target="12">0</span><span class="stat-suffix">+</span>
+				<span class="stat-label">Projects Shipped</span>
+			</div>
+			<div class="stat-card">
+				<span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+				<span class="stat-label">Certifications</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Right: orbit -->
+		</div>
+
+	<!-- Right: orbit system -->
 	<div class="hero-orbit-col">
+<div class="hero-right">
 		<!-- Orbit system: spinning ring of tech logos -->
 		<div class="hero-orbit">
 			<!-- Glass orbit ring -->
@@ -232,48 +279,8 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- Right: text + stats -->
-	<div class="hero-right">
-		<div class="hero-text">
-			<div class="section-tag reveal">
-				<span class="hero-label-dot"></span>
-				ML Engineer
-			</div>
-			<h1 class="hero-title reveal" style="transition-delay:60ms">
-				Building systems<br/>
-				<em>that learn at scale.</em>
-			</h1>
-			<p class="hero-sub reveal" style="transition-delay:120ms">
-				From research notebook to production inference — I design, train, and deploy
-				machine learning systems that handle millions of predictions daily.
-			</p>
-			<div class="hero-cta reveal" style="transition-delay:180ms">
-				<a href="#projects" class="btn-primary">
-					View Projects
-					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-				</a>
-				<a href="#contact" class="btn-ghost">Get in Touch</a>
-			</div>
-		</div>
-		<div class="hero-stats reveal-stagger" style="transition-delay:240ms">
-			<div class="stat-card">
-				<span class="stat-num" data-target="50">0</span><span class="stat-suffix">M+</span>
-				<span class="stat-label">Daily Predictions</span>
-			</div>
-			<div class="stat-card">
-				<span class="stat-num" data-target="18">0</span><span class="stat-suffix">%</span>
-				<span class="stat-label">Churn Reduction</span>
-			</div>
-			<div class="stat-card">
-				<span class="stat-num" data-target="40">0</span><span class="stat-suffix">%</span>
-				<span class="stat-label">Engagement Lift</span>
-			</div>
-		</div>
-	</div>
 </section>
+
 
 <!-- ══════════════════════════════════════════════
      ABOUT
@@ -608,13 +615,21 @@
 		overflow: hidden;
 	}
 
-	/* Left column: orbit system */
+	/* Left column: text + stats */
+	.hero-left {
+		flex: 1;
+		max-width: 520px;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	/* Right column: orbit system */
 	.hero-orbit-col {
 		flex-shrink: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		order: -1;
 	}
 
 	/* Orbit system container */
@@ -632,9 +647,8 @@
 		position: absolute;
 		inset: 0;
 		border-radius: 50%;
-		border: 1px solid rgba(0,0,0,0.08);
+		border: 1px solid var(--border);
 		background: transparent;
-		box-shadow: inset 0 0 30px rgba(0,0,0,0.03);
 	}
 
 	/* Spinning orbit wrapper — this orbits all logos around the center */
@@ -675,11 +689,8 @@
 		gap: 0.3rem;
 		padding: 0.5rem 0.6rem;
 		background: transparent;
-		border: 1px solid rgba(0,0,0,0.08);
+		border: 1px solid var(--border);
 		border-radius: var(--radius-md);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 		white-space: nowrap;
 	}
 	/* Counter-rotate each chip so label stays upright as it orbits */
@@ -792,7 +803,7 @@
 		color: var(--text-muted);
 	}
 
-	/* Responsive: stack on mobile, orbit on top */
+	/* Responsive: stack on mobile, orbit on right */
 	@media (max-width: 768px) {
 		.hero-section {
 			flex-direction: column;
@@ -800,24 +811,28 @@
 			gap: 3rem;
 			align-items: center;
 		}
-		.hero-orbit-col { order: -1; }
+		.hero-left {
+			text-align: center;
+			max-width: 100%;
+			align-items: center;
+			order: -1;
+		}
 		.hero-orbit {
 			width: 260px;
 			height: 260px;
 		}
-		/* 260px orbit, center (130,130), radius 105px */
 		.a0   { top: 111px; left: 201px; }
 		.a60  { top: 201px; left: 147px; }
 		.a120 { top: 201px; left: 38px;  }
 		.a180 { top: 111px; left: -16px; }
 		.a240 { top: 21px;  left: 38px;  }
 		.a300 { top: 21px;  left: 147px; }
-		/* Fix transform-origin for smaller orbit */
 		.orbit-anim { transform-origin: 130px 130px; }
-		.hero-right {
-			text-align: center;
-			max-width: 100%;
-			align-items: center;
+		/* On mobile: no background/border on chips, pure icon */
+		.orbit-logo-chip {
+			background: transparent !important;
+			border-color: transparent !important;
+			box-shadow: none !important;
 		}
 		.hero-cta { justify-content: center; }
 		.hero-stats { width: 100%; }
@@ -825,13 +840,12 @@
 
 	/* Dark theme orbit overrides */
 	:global([data-theme="dark"]) .orbit-ring {
-		border-color: rgba(255,255,255,0.08);
-		box-shadow: inset 0 0 30px rgba(0,0,0,0.3);
+		border-color: rgba(255,255,255,0.06);
 	}
 	:global([data-theme="dark"]) .orbit-logo-chip {
-		background: rgba(255,255,255,0.04);
+		background: transparent;
 		border-color: rgba(255,255,255,0.08);
-		box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 	}
 	:global([data-theme="dark"]) .orbit-logo-name {
 		color: rgba(255,255,255,0.5);

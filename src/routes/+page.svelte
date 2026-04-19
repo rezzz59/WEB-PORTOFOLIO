@@ -643,32 +643,58 @@
 		animation: orbit-spin 24s linear infinite;
 	}
 
-	/* Each orbiting logo item */
+	/* Each orbiting logo — positioned at fixed angles on the orbit circle
+	   Orbit: 320×320, center (160,160), radius 130px
+	   Logo chip: ~88×48px, centered on orbit point */
 	.orbit-logo {
 		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* center of orbit container = 160,160. Logo size ~48. Position so center of chip = on orbit circle (r=130) */
-		top: 50%;
-		left: 50%;
-		/* offset = center(160) - chipCenter(24) = 136px */
-		margin-top: -24px;
-		margin-left: -24px;
 	}
-	/* aN = angle N° clockwise from right (0°). Keep label upright by counter-rotating the chip */
-	.a0   { transform: rotate(0deg)   translateX(130px) rotate(0deg);   animation: orbit-spin 24s linear infinite; animation-delay: 0s; }
-	.a60  { transform: rotate(60deg)  translateX(130px) rotate(-60deg);  animation: orbit-spin 24s linear infinite; animation-delay: -4s; }
-	.a120 { transform: rotate(120deg) translateX(130px) rotate(-120deg); animation: orbit-spin 24s linear infinite; animation-delay: -8s; }
-	.a180 { transform: rotate(180deg) translateX(130px) rotate(-180deg); animation: orbit-spin 24s linear infinite; animation-delay: -12s; }
-	.a240 { transform: rotate(240deg) translateX(130px) rotate(-240deg); animation: orbit-spin 24s linear infinite; animation-delay: -16s; }
-	.a300 { transform: rotate(300deg) translateX(130px) rotate(-300deg); animation: orbit-spin 24s linear infinite; animation-delay: -20s; }
+	/* 0° — right (Python) → center (290, 160), chip offset (-44, -24) */
+	.a0   { top: 136px;  left: 246px; animation: orbit0  24s linear infinite; }
+	/* 60° — bottom-right (TensorFlow) → center (225, 273) */
+	.a60  { top: 249px;  left: 181px; animation: orbit60 24s linear infinite; }
+	/* 120° — bottom-left (PyTorch) → center (95, 273) */
+	.a120 { top: 249px;  left: 51px;  animation: orbit120 24s linear infinite; }
+	/* 180° — left (Pandas) → center (30, 160) */
+	.a180 { top: 136px;  left: -14px; animation: orbit180 24s linear infinite; }
+	/* 240° — top-left (NumPy) → center (95, 47) */
+	.a240 { top: 23px;   left: 51px;  animation: orbit240 24s linear infinite; }
+	/* 300° — top-right (Scikit-learn) → center (225, 47) */
+	.a300 { top: 23px;   left: 181px; animation: orbit300 24s linear infinite; }
 
-	/* Orbit animation keyframes */
-	@keyframes orbit-spin {
-		from { transform: rotate(0deg); }
-		to   { transform: rotate(360deg); }
+	/* Each logo animates from its starting angle to 360° */
+	@keyframes orbit0   { from { transform: rotate(0deg);   } to { transform: rotate(360deg);   } }
+	@keyframes orbit60  { from { transform: rotate(60deg);  } to { transform: rotate(420deg);  } }
+	@keyframes orbit120 { from { transform: rotate(120deg); } to { transform: rotate(480deg); } }
+	@keyframes orbit180 { from { transform: rotate(180deg); } to { transform: rotate(540deg); } }
+	@keyframes orbit240 { from { transform: rotate(240deg); } to { transform: rotate(600deg); } }
+	@keyframes orbit300 { from { transform: rotate(300deg); } to { transform: rotate(660deg); } }
+
+	/* Logo chip: counter-rotate to keep label upright while the logo orbits */
+	.orbit-logo-chip {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.6rem 0.75rem;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-md);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+		white-space: nowrap;
 	}
+	/* Counter-rotate each chip so label stays upright */
+	.a0   .orbit-logo-chip { transform: rotate(0deg);   }
+	.a60  .orbit-logo-chip { transform: rotate(-60deg);  }
+	.a120 .orbit-logo-chip { transform: rotate(-120deg); }
+	.a180 .orbit-logo-chip { transform: rotate(-180deg); }
+	.a240 .orbit-logo-chip { transform: rotate(-240deg); }
+	.a300 .orbit-logo-chip { transform: rotate(-300deg); }
 
 	/* Logo chip: glass card */
 	.orbit-logo-chip {
@@ -799,13 +825,13 @@
 			width: 260px;
 			height: 260px;
 		}
-		/* Scale down orbit positions for smaller container */
-		.a0   { transform: rotate(0deg)   translateX(105px) rotate(0deg); }
-		.a60  { transform: rotate(60deg)  translateX(105px) rotate(-60deg); }
-		.a120 { transform: rotate(120deg) translateX(105px) rotate(-120deg); }
-		.a180 { transform: rotate(180deg) translateX(105px) rotate(-180deg); }
-		.a240 { transform: rotate(240deg) translateX(105px) rotate(-240deg); }
-		.a300 { transform: rotate(300deg) translateX(105px) rotate(-300deg); }
+		/* 260px orbit, center (130,130), radius 105px */
+		.a0   { top: 111px; left: 201px; }
+		.a60  { top: 201px; left: 147px; }
+		.a120 { top: 201px; left: 38px;  }
+		.a180 { top: 111px; left: -16px; }
+		.a240 { top: 21px;  left: 38px;  }
+		.a300 { top: 21px;  left: 147px; }
 		.hero-right {
 			text-align: center;
 			max-width: 100%;

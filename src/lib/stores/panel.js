@@ -1,4 +1,4 @@
-import { writable, get } from 'svelte/store';
+import { writable } from 'svelte/store';
 
 function createPanelStore() {
 	const { subscribe, set, update } = writable({
@@ -21,12 +21,19 @@ function createPanelStore() {
 	}
 
 	function toggleProject(project) {
-		const state = get({ subscribe });
-		if (state.activeProject?.id === project.id) {
-			closeProject();
-		} else {
-			openProject(project);
-		}
+		update(state => {
+			if (state.activeProject?.id === project.id) {
+				if (typeof document !== 'undefined') {
+					document.body.style.overflow = '';
+				}
+				return { activeProject: null, isOpen: false };
+			} else {
+				if (typeof document !== 'undefined') {
+					document.body.style.overflow = 'hidden';
+				}
+				return { activeProject: project, isOpen: true };
+			}
+		});
 	}
 
 	return {

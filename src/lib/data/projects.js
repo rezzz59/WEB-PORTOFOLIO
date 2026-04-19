@@ -68,7 +68,7 @@ export const projects = [
 		name: 'Recommendation Engine',
 		desc: 'Collaborative filtering system leveraging TensorFlow Recommenders to personalize content discovery, increasing user engagement by 40%.',
 		stack: ['Python', 'TensorFlow', 'Apache Beam', 'BigQuery', 'Vertex AI', 'Redis'],
-		metric: 40,
+		metric: 40.0,
 		metricLabel: 'Engagement Lift %',
 		chartType: 'line',
 		chartData: {

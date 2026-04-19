@@ -2,7 +2,7 @@ export const pubs = [
 	{
 		type: 'article',
 		title: 'Optimizing Neural Networks for Edge Deployment',
-		source: 'Medium — Towards Data Science',
+		source: 'Medium',
 		date: '2024',
 		readTime: '8 min read'
 	},

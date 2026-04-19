@@ -683,42 +683,30 @@
 			0 2px 8px rgba(0, 0, 0, 0.08);
 	}
 
-	/* Expanding pulse ring per logo chip — staggered across 6 logos
-	   Each logo's wave starts at a different time so they don't sync */
+	/* Expanding pulse ring per logo chip — perfectly staggered
+	   Each wave is 24s apart (same as orbit period) → never overlaps */
+	.a0   { --delay: 0s;   }
+	.a60  { --delay: 4s;   }
+	.a120 { --delay: 8s;   }
+	.a180 { --delay: 12s;  }
+	.a240 { --delay: 16s;  }
+	.a300 { --delay: 20s;  }
+
 	.chip-pulse {
 		position: absolute;
+		inset: -5px;
 		border-radius: 50%;
 		pointer-events: none;
-	}
-	.chip-pulse::before,
-	.chip-pulse::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		border-radius: 50%;
-	}
-	/* Outer ring */
-	.chip-pulse::before {
 		border: 1.5px solid var(--accent);
-		animation: chip-wave 3.2s ease-out infinite;
+		animation: chip-wave 24s ease-out infinite;
+		animation-delay: var(--delay);
 	}
-	/* Inner ring */
-	.chip-pulse::after {
-		border: 1px solid var(--accent);
-		opacity: 0.6;
-		animation: chip-wave 3.2s ease-out 1.6s infinite;
-	}
-	/* Stagger: each logo starts its wave at a different point */
-	.p0  { inset: -5px; animation-delay: 0s; }
-	.p60 { inset: -5px; animation-delay: 0.53s; }
-	.p120{ inset: -5px; animation-delay: 1.07s; }
-	.p180{ inset: -5px; animation-delay: 1.60s; }
-	.p240{ inset: -5px; animation-delay: 2.13s; }
-	.p300{ inset: -5px; animation-delay: 2.67s; }
 
 	@keyframes chip-wave {
-		0%   { transform: scale(0.9); opacity: 0.7; }
-		100% { transform: scale(2.0); opacity: 0; }
+		0%   { transform: scale(0.8); opacity: 0; }
+		4%   { opacity: 0.6; }
+		20%  { transform: scale(1.6); opacity: 0; }
+		100% { transform: scale(1.6); opacity: 0; }
 	}
 
 	/* Counter-rotate each chip so label stays upright as it orbits */

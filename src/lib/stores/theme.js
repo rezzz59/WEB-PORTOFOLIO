@@ -23,7 +23,7 @@ function createThemeStore() {
 		},
 		init() {
 			if (browser) {
-				const stored = localStorage.getItem(STORAGE_KEY) || 'dark';
+				const stored = localStorage.getItem(STORAGE_KEY) || 'light';
 				document.documentElement.setAttribute('data-theme', stored);
 				set(stored);
 			}

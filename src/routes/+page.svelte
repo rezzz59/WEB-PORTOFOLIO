@@ -157,95 +157,59 @@
      HERO
 ══════════════════════════════════════════════ -->
 <section id="hero" class="hero-section">
-	<!-- Glass rings + floating logos -->
-	<div class="hero-rings-wrap">
-		<!-- Outer glass ring -->
-		<div class="glass-ring outer-ring"></div>
-		<!-- Inner glass ring -->
-		<div class="glass-ring inner-ring"></div>
-		<!-- Center glow dot -->
-		<div class="center-dot"></div>
 
-		<!-- Outer ring logos: Python, TensorFlow, Pandas -->
-		<div class="orbit-logo-row outer-row">
-			<!-- Python -->
-			<div class="orbit-logo-item python-item">
-				<svg viewBox="0 0 256 255" width="32" height="32">
-					<path fill="var(--accent)" d="M126.916.072c-69.899 0-60.689 28.33-60.689 52.163 0 17.446 10.522 33.244 28.285 39.98 3.732 1.417 7.972 2.377 12.766 2.377 4.752 0 8.955-.96 12.616-2.377 3.44-1.306 7.01-3.002 10.383-5.013-12.63-8.866-14.15-25.56-5.086-38.455 11.05-13.748 27.53-9.075 28.8-.98 1.27 8.142-6.87 15.794-15.86 21.293 7.32 3.41 15.87 7.09 23.75 13.55 15.17 12.43 12.61 30.81 12.61 38.44 0 6.97-2.78 18.27-19.15 18.27-18.17 0-31.77-12.32-33.58-26.62-.28-2.21-.44-4.5-.44-6.8 0-1.04.04-2.07.12-3.08H86.648v-16.12h81.07v11.63c-3.07 8.78-5.84 17.84-5.84 27.26 0 24.75 22.86 33.59 42.83 18.79 12.35-9.15 18.54-25.45 18.54-38.44 0-15.57-9.66-33.69-34.44-38.44-16.93-3.27-34.36-.55-45.79 8.1-2.16 1.64-4.03 3.44-5.66 5.28C144.138 9.01 138.23 2.44 126.916.072zM95.354 76.93c-2.27 1.68-5.03 2.43-9.17 2.43-4.38 0-8.08-.87-11.32-2.43-4.8-2.3-8.16-6.4-8.16-12.15 0-5.61 3.37-9.8 8.16-12.16 3.24-1.56 6.94-2.43 11.32-2.43 4.14 0 6.91.88 9.17 2.43 4.53 3.12 5.96 8.74 5.96 12.16s-1.43 9.04-5.96 12.15zm76.463 53.03c2.27 1.68 5.04 2.43 9.18 2.43 4.37 0 8.08-.87 11.31-2.43 4.8-2.3 8.16-6.4 8.16-12.15 0-5.61-3.36-9.8-8.16-12.16-3.23-1.56-6.94-2.43-11.31-2.43-4.14 0-6.91.88-9.18 2.43-4.54 3.12-5.96 8.74-5.96 12.16s1.42 9.04 5.96 12.15z"/>
-				</svg>
-				<span class="orbit-logo-label">Python</span>
-			</div>
-			<!-- TensorFlow -->
-			<div class="orbit-logo-item tf-item">
-				<svg viewBox="0 0 256 267" width="32" height="32">
-					<path fill="var(--accent)" d="M128 0C57.308 0 0 57.308 0 128s57.308 128 128 128 128-57.308 128-128S198.692 0 128 0zm72.662 94.663c2.27-15.63-2.27-25.457-10.908-34.098-17.217-17.217-45.227-17.217-62.444 0-2.27 2.27-3.633 4.54-4.54 6.813-1.36 3.407-1.36 6.813-.907 10.22-2.27 2.27-2.27 5.447 0 7.72 2.27 2.27 5.447 2.27 7.72 0 6.813-6.813 17.217-6.813 24.031 0 3.407 3.407 3.407 9.08-.907 11.36-5.447 2.27-9.08 6.813-12.717 10.45-2.27 2.27-3.633 4.54-5.447 7.72-4.54 9.08-4.54 20.487 0 29.567l13.627 13.627v-5.447c0-4.54 2.27-9.08 5.447-12.26l20.487-20.487z"/>
-				</svg>
-				<span class="orbit-logo-label">TensorFlow</span>
-			</div>
-			<!-- Pandas -->
-			<div class="orbit-logo-item pandas-item">
-				<svg viewBox="0 0 256 248" width="32" height="32">
-					<path fill="var(--accent)" d="M167.2 32.5c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm18.3 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-10.2 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-100.1 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H94.5zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H114zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H204zm-89.9 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H114zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H204z"/>
-				</svg>
-				<span class="orbit-logo-label">Pandas</span>
-			</div>
+	<!-- Tech logos — static, formal, official brand colors -->
+	<div class="hero-logos-wrap">
+		<!-- Outer ring: Python, TensorFlow, Pandas -->
+		<div class="hero-logo-item">
+			<!-- Python official SVG -->
+			<svg viewBox="0 0 256 255" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#3776AB" d="M126.916.072c-69.899 0-60.689 28.33-60.689 52.163 0 17.446 10.522 33.244 28.285 39.98 3.732 1.417 7.972 2.377 12.766 2.377 4.752 0 8.955-.96 12.616-2.377 3.44-1.306 7.01-3.002 10.383-5.013-12.63-8.866-14.15-25.56-5.086-38.455 11.05-13.748 27.53-9.075 28.8-.98 1.27 8.142-6.87 15.794-15.86 21.293 7.32 3.41 15.87 7.09 23.75 13.55 15.17 12.43 12.61 30.81 12.61 38.44 0 6.97-2.78 18.27-19.15 18.27-18.17 0-31.77-12.32-33.58-26.62-.28-2.21-.44-4.5-.44-6.8 0-1.04.04-2.07.12-3.08H86.648v-16.12h81.07v11.63c-3.07 8.78-5.84 17.84-5.84 27.26 0 24.75 22.86 33.59 42.83 18.79 12.35-9.15 18.54-25.45 18.54-38.44 0-15.57-9.66-33.69-34.44-38.44-16.93-3.27-34.36-.55-45.79 8.1-2.16 1.64-4.03 3.44-5.66 5.28C144.138 9.01 138.23 2.44 126.916.072zM95.354 76.93c-2.27 1.68-5.03 2.43-9.17 2.43-4.38 0-8.08-.87-11.32-2.43-4.8-2.3-8.16-6.4-8.16-12.15 0-5.61 3.37-9.8 8.16-12.16 3.24-1.56 6.94-2.43 11.32-2.43 4.14 0 6.91.88 9.17 2.43 4.53 3.12 5.96 8.74 5.96 12.16s-1.43 9.04-5.96 12.15zm76.463 53.03c2.27 1.68 5.04 2.43 9.18 2.43 4.37 0 8.08-.87 11.31-2.43 4.8-2.3 8.16-6.4 8.16-12.15 0-5.61-3.36-9.8-8.16-12.16-3.23-1.56-6.94-2.43-11.31-2.43-4.14 0-6.91.88-9.18 2.43-4.54 3.12-5.96 8.74-5.96 12.16s1.42 9.04 5.96 12.15z"/>
+			</svg>
+			<span class="hero-logo-name">Python</span>
 		</div>
-
-		<!-- Inner ring logos: PyTorch, NumPy, Scikit-learn -->
-		<div class="orbit-logo-row inner-row">
-			<!-- PyTorch -->
-			<div class="orbit-logo-item pytorch-item">
-				<svg viewBox="0 0 256 271" width="26" height="26">
-					<path fill="var(--accent)" d="M185.6 0.8c-0.4 0.3-0.8 0.5-1.3 0.5 -0.5 0-0.9-0.2-1.3-0.5 -0.7-0.8-0.9-2-0.3-3 5.8-10.7 8.9-21.3 9.1-31.4 0.2-11.6-3-21.8-8.9-28.5 -0.7-0.8-0.8-1.9-0.3-2.8 0.5-0.9 1.5-1.3 2.5-1 11.3 3.5 20.6 13.2 25.2 26.4 4.9 14.2 4.2 30.6-2.1 46.7C205.7 15 198 21.7 188.9 25.6c-0.4 0.2-0.9 0.3-1.3 0.3 -0.5 0-0.9-0.1-1.3-0.4 -0.8-0.7-1-1.9-0.5-2.9C189.3 13.4 189 6.9 187.3 0.8z"/>
-					<path fill="var(--accent)" d="M70.4 0.8c-0.4 0.3-0.8 0.5-1.3 0.5 -0.5 0-0.9-0.2-1.3-0.5 -0.7-0.8-0.9-2-0.3-3 5.8-10.7 8.9-21.3 9.1-31.4 0.2-11.6-3-21.8-8.9-28.5 -0.7-0.8-0.8-1.9-0.3-2.8 0.5-0.9 1.5-1.3 2.5-1 11.3 3.5 20.6 13.2 25.2 26.4 4.9 14.2 4.2 30.6-2.1 46.7C90.5 15 82.8 21.7 73.7 25.6c-0.4 0.2-0.9 0.3-1.3 0.3 -0.5 0-0.9-0.1-1.3-0.4 -0.8-0.7-1-1.9-0.5-2.9C73.9 13.4 73.6 6.9 72.1 0.8z"/>
-					<path fill="var(--accent)" d="M128 271c-70.7 0-128-57.3-128-128S57.3 15 128 15s128 57.3 128 128-57.3 128-128 128zm-10.7-195.6c-5.9 0.5-12.8 2.2-18 4.9 -0.8 0.4-1.1 1.4-0.7 2.2 0.4 0.8 1.4 1.1 2.2 0.7 9.4-5.1 22.9-6.9 35.8-1.4 0.9 0.4 1.9-0.1 2.2-1.1 0.3-0.9-0.1-1.9-1.1-2.2C132.7 77.5 127.5 76 124 75.4z"/>
-				</svg>
-				<span class="orbit-logo-label">PyTorch</span>
-			</div>
-			<!-- NumPy -->
-			<div class="orbit-logo-item numpy-item">
-				<svg viewBox="0 0 256 256" width="26" height="26">
-					<path fill="var(--accent)" d="M0 0h72v72H0V0zm184 0h72v72h-72V0zm0 184h72v72h-72v-72zm-184 0h72v72H0v-72zM28 28v40h40V28H28zm136 0v40h40V28h-40zM28 188v40h40v-40H28zm136 0v40h40v-40h-40z"/>
-				</svg>
-				<span class="orbit-logo-label">NumPy</span>
-			</div>
-			<!-- Scikit-learn -->
-			<div class="orbit-logo-item sklearn-item">
-				<svg viewBox="0 0 256 256" width="26" height="26">
-					<path fill="var(--accent)" d="M128 0C57.4 0 0 57.4 0 128s57.4 128 128 128 128-57.4 128-128S198.6 0 128 0zm0 240c-61.8 0-112-50.2-112-112S66.2 16 128 16s112 50.2 112 112-50.2 112-112 112z"/>
-					<path fill="var(--accent)" d="M80 80c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V88c0-4.4-3.6-8-8-8H80zm56 16H96v16h40V96zm0 48H96v16h40v-16zM88 96v16h16V96H88zm48 0v16h16V96h-16zm0 48v16h16v-16h-16z"/>
-				</svg>
-				<span class="orbit-logo-label">Scikit-learn</span>
-			</div>
+		<div class="hero-logo-item">
+			<!-- TensorFlow official SVG -->
+			<svg viewBox="0 0 256 267" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#FF6F00" d="M128 0C57.308 0 0 57.308 0 128s57.308 128 128 128 128-57.308 128-128S198.692 0 128 0zm72.662 94.663c2.27-15.63-2.27-25.457-10.908-34.098-17.217-17.217-45.227-17.217-62.444 0-2.27 2.27-3.633 4.54-4.54 6.813-1.36 3.407-1.36 6.813-.907 10.22-2.27 2.27-2.27 5.447 0 7.72 2.27 2.27 5.447 2.27 7.72 0 6.813-6.813 17.217-6.813 24.031 0 3.407 3.407 3.407 9.08-.907 11.36-5.447 2.27-9.08 6.813-12.717 10.45-2.27 2.27-3.633 4.54-5.447 7.72-4.54 9.08-4.54 20.487 0 29.567l13.627 13.627v-5.447c0-4.54 2.27-9.08 5.447-12.26l20.487-20.487z"/>
+			</svg>
+			<span class="hero-logo-name">TensorFlow</span>
 		</div>
-
-		<!-- Floating badges: Docker, FastAPI, MLflow -->
-		<div class="float-badges">
-			<div class="float-badge" style="animation-delay: 0.5s">
-				<svg viewBox="0 0 256 268" width="14" height="14">
-					<path fill="var(--accent)" d="M42 49c0 5.7 4.6 10.3 10.3 10.3h8.3v-8.3c0-5.7-4.6-10.3-10.3-10.3H42v8.3zm10.3-8.3c-5.7 0-10.3 4.6-10.3 10.3v25.7c0 5.7 4.6 10.3 10.3 10.3h25.7c5.7 0 10.3-4.6 10.3-10.3v-8.3h-8.3v8.3c0 5.7-4.6 10.3-10.3 10.3H42c-5.7 0-10.3-4.6-10.3-10.3V51c0-5.7 4.6-10.3 10.3-10.3h25.7v8.3H52.3zm147.3-8.3c-16.4 0-29.7 13.3-29.7 29.7 0 13.1 8.5 24.2 20 28.2v9.1c0 1.1.9 2 2 2h8.3c1.1 0 2-.9 2-2v-9.1c11.5-4 20-15.1 20-28.2 0-16.4-13.3-29.7-29.7-29.7H180v8.3c0 5.7 4.6 10.3 10.3 10.3 5.7 0 10.3-4.6 10.3-10.3V51c0-5.7-4.6-10.3-10.3-10.3-5.7 0-10.3 4.6-10.3 10.3v8.3h-8.3v-8.3zm0 66.7h8.3c1.1 0 2-.9 2-2v-9.1c5.7-2 10.3-7.2 10.3-13.7 0-7.8-6.3-14-14-14-7.7 0-14 6.3-14 14 0 6.5 4.5 11.7 10.3 13.7v9.1c0 1.1.9 2 2 2zM42 165.7c-5.7 0-10.3 4.6-10.3 10.3v8.3h8.3c5.7 0 10.3 4.6 10.3 10.3s-4.6 10.3-10.3 10.3H32c-5.7 0-10.3 4.6-10.3 10.3v8.3c0 5.7 4.6 10.3 10.3 10.3h8.3c5.7 0 10.3 4.6 10.3 10.3s-4.6 10.3-10.3 10.3H32c-5.7 0-10.3 4.6-10.3 10.3v16.7c0 5.7 4.6 10.3 10.3 10.3h192c5.7 0 10.3-4.6 10.3-10.3V246c0-5.7-4.6-10.3-10.3-10.3h-8.3c-5.7 0-10.3-4.6-10.3-10.3s4.6-10.3 10.3-10.3h8.3c5.7 0 10.3-4.6 10.3-10.3v-8.3c0-5.7-4.6-10.3-10.3-10.3h-8.3c-5.7 0-10.3-4.6-10.3-10.3s4.6-10.3 10.3-10.3h8.3c5.7 0 10.3-4.6 10.3-10.3v-8.3c0-5.7-4.6-10.3-10.3-10.3H42z"/>
-				</svg>
-				Docker
-			</div>
-			<div class="float-badge" style="animation-delay: 1.5s">
-				<svg viewBox="0 0 256 256" width="14" height="14">
-					<path fill="var(--accent)" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm0 240c-61.8 0-112-50.2-112-112S66.2 16 128 16s112 50.2 112 112-50.2 112-112 112z"/>
-					<path fill="var(--accent)" d="M80 80h96c4.4 0 8-3.6 8-8V80zm16 16v64h64v-64H96zM64 96h16v64H64V96zm96 0h16v64h-16V96zM64 176h16v16H64v-16zm96 0h16v16h-16v-16z"/>
-				</svg>
-				FastAPI
-			</div>
-			<div class="float-badge" style="animation-delay: 2.5s">
-				<svg viewBox="0 0 256 256" width="14" height="14">
-					<path fill="var(--accent)" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm0 240c-61.8 0-112-50.2-112-112S66.2 16 128 16s112 50.2 112 112-50.2 112-112 112z"/>
-					<path fill="var(--accent)" d="M80 80h96v16H80V80zm16 32h64v16H96v-16zm0 48h48v16H96v-16z"/>
-				</svg>
-				MLflow
-			</div>
+		<div class="hero-logo-item">
+			<!-- PyTorch official SVG -->
+			<svg viewBox="0 0 256 271" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#EE4C2C" d="M185.6 0.8c-0.4 0.3-0.8 0.5-1.3 0.5 -0.5 0-0.9-0.2-1.3-0.5 -0.7-0.8-0.9-2-0.3-3 5.8-10.7 8.9-21.3 9.1-31.4 0.2-11.6-3-21.8-8.9-28.5 -0.7-0.8-0.8-1.9-0.3-2.8 0.5-0.9 1.5-1.3 2.5-1 11.3 3.5 20.6 13.2 25.2 26.4 4.9 14.2 4.2 30.6-2.1 46.7C205.7 15 198 21.7 188.9 25.6c-0.4 0.2-0.9 0.3-1.3 0.3 -0.5 0-0.9-0.1-1.3-0.4 -0.8-0.7-1-1.9-0.5-2.9C189.3 13.4 189 6.9 187.3 0.8z"/>
+				<path fill="#EE4C2C" d="M70.4 0.8c-0.4 0.3-0.8 0.5-1.3 0.5 -0.5 0-0.9-0.2-1.3-0.5 -0.7-0.8-0.9-2-0.3-3 5.8-10.7 8.9-21.3 9.1-31.4 0.2-11.6-3-21.8-8.9-28.5 -0.7-0.8-0.8-1.9-0.3-2.8 0.5-0.9 1.5-1.3 2.5-1 11.3 3.5 20.6 13.2 25.2 26.4 4.9 14.2 4.2 30.6-2.1 46.7C90.5 15 82.8 21.7 73.7 25.6c-0.4 0.2-0.9 0.3-1.3 0.3 -0.5 0-0.9-0.1-1.3-0.4 -0.8-0.7-1-1.9-0.5-2.9C73.9 13.4 73.6 6.9 72.1 0.8z"/>
+				<path fill="#EE4C2C" d="M128 271c-70.7 0-128-57.3-128-128S57.3 15 128 15s128 57.3 128 128-57.3 128-128 128z"/>
+			</svg>
+			<span class="hero-logo-name">PyTorch</span>
+		</div>
+		<div class="hero-logo-item">
+			<!-- Pandas official SVG -->
+			<svg viewBox="0 0 256 248" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#150458" d="M167.2 32.5c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm18.3 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-10.2 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1V74c0-2.8-2.3-5.1-5.1-5.1h-10.4zm-100.1 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H94.5zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H114zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H204zm-89.9 34c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H114zm70.8 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1h-10.4zm19.5 0c-5.4 0-9.8 3.4-9.8 7.5v13.6c0 3.8 3.3 6.9 7.3 6.9h11.8c3.4 0 6.2-2.3 6.2-5.1v-17.8c0-2.8-2.3-5.1-5.1-5.1H204z"/>
+			</svg>
+			<span class="hero-logo-name">Pandas</span>
+		</div>
+		<div class="hero-logo-item">
+			<!-- NumPy official SVG -->
+			<svg viewBox="0 0 256 256" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#4DABCF" d="M0 0h72v72H0V0zm184 0h72v72h-72V0zm0 184h72v72h-72v-72zm-184 0h72v72H0v-72zM28 28v40h40V28H28zm136 0v40h40V28h-40zM28 188v40h40v-40H28zm136 0v40h40v-40h-40z"/>
+			</svg>
+			<span class="hero-logo-name">NumPy</span>
+		</div>
+		<div class="hero-logo-item">
+			<!-- Scikit-learn official SVG -->
+			<svg viewBox="0 0 256 256" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#F7931E" d="M128 0C57.4 0 0 57.4 0 128s57.4 128 128 128 128-57.4 128-128S198.6 0 128 0zm0 240c-61.8 0-112-50.2-112-112S66.2 16 128 16s112 50.2 112 112-50.2 112-112 112z"/>
+				<path fill="#F7931E" d="M80 80c-4.4 0-8 3.6-8 8v80c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V88c0-4.4-3.6-8-8-8H80zm56 16H96v16h40V96zm0 48H96v16h40v-16zM88 96v16h16V96H88zm48 0v16h16V96h-16zm0 48v16h16v-16h-16z"/>
+			</svg>
+			<span class="hero-logo-name">Scikit-learn</span>
 		</div>
 	</div>
 
-	<!-- Hero text: centered, below the ring area on mobile -->
-	<div class="hero-content">
+	<!-- Hero text -->
+	<div class="hero-text">
 		<div class="section-tag reveal">
 			<span class="hero-label-dot"></span>
 			ML Engineer
@@ -261,7 +225,7 @@
 		<div class="hero-cta reveal" style="transition-delay:180ms">
 			<a href="#projects" class="btn-primary">
 				View Projects
-				<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+				<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</a>
@@ -621,129 +585,44 @@
 		column-gap: 0;
 	}
 
-	/* Glass rings container — centered in middle column */
-	.hero-rings-wrap {
+	/* Tech logos wrap — centered, column 2 row 2 */
+	.hero-logos-wrap {
 		grid-column: 2;
 		grid-row: 2;
-		position: relative;
-		width: 320px;
-		height: 320px;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem 2rem;
 		align-items: center;
-		justify-content: center;
+		justify-items: center;
+		padding: 1.5rem 2rem;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
 	}
 
-	/* Glass ring */
-	.glass-ring {
-		position: absolute;
-		border-radius: 50%;
-		border: 1px solid rgba(0, 102, 176, 0.15);
-		box-shadow:
-			inset 0 0 40px rgba(0, 102, 176, 0.04),
-			0 0 0 1px rgba(0, 102, 176, 0.05);
-	}
-	.outer-ring {
-		width: 320px;
-		height: 320px;
-		border-color: rgba(0, 102, 176, 0.12);
-	}
-	.inner-ring {
-		width: 200px;
-		height: 200px;
-		border-color: rgba(0, 102, 176, 0.1);
-	}
-
-	/* Center dot */
-	.center-dot {
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background: var(--accent);
-		box-shadow: 0 0 16px var(--accent);
-	}
-
-	/* Logo rows — positioned absolutely within the rings container */
-	.orbit-logo-row {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.outer-row { width: 320px; height: 320px; }
-	.inner-row  { width: 200px; height: 200px; }
-
-	/* Each logo item: positioned along the ring circle */
-	.orbit-logo-item {
-		position: absolute;
+	/* Each logo chip */
+	.hero-logo-item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.35rem;
+		gap: 0.4rem;
+		opacity: 0.85;
+		transition: opacity 0.2s ease, transform 0.2s ease;
 	}
-	.orbit-logo-label {
+	.hero-logo-item:hover {
+		opacity: 1;
+		transform: translateY(-2px);
+	}
+	.hero-logo-name {
 		font-family: var(--font-mono);
-		font-size: 0.6rem;
+		font-size: 0.65rem;
 		color: var(--text-muted);
 		white-space: nowrap;
 	}
 
-	/* Outer ring positions */
-	.python-item   { transform: translate(148px, 0); }
-	.tf-item      { transform: translate(148px, 0) rotate(120deg); }
-	.pandas-item  { transform: translate(148px, 0) rotate(240deg); }
-
-	/* Inner ring positions */
-	.pytorch-item { transform: translate(88px, 0); }
-	.numpy-item   { transform: translate(88px, 0) rotate(120deg); }
-	.sklearn-item { transform: translate(88px, 0) rotate(240deg); }
-
-	/* Keep labels upright inside rotated items */
-	.tf-item .orbit-logo-label,
-	.pandas-item .orbit-logo-label,
-	.numpy-item .orbit-logo-label { transform: rotate(240deg); }
-	.sklearn-item .orbit-logo-label { transform: rotate(120deg); }
-
-	/* Floating badges — positioned right of the ring */
-	.float-badges {
-		grid-column: 3;
-		grid-row: 2;
-		display: flex;
-		flex-direction: column;
-		gap: 0.625rem;
-		margin-left: 2rem;
-	}
-	.float-badge {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.375rem 0.75rem;
-		background: rgba(255, 255, 255, 0.7);
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-		border: 1px solid var(--border);
-		border-radius: 99px;
-		font-family: var(--font-mono);
-		font-size: 0.7rem;
-		color: var(--text-muted);
-		animation: badge-bob 4s ease-in-out infinite;
-		cursor: default;
-		transition: border-color 0.15s, color 0.15s, background 0.15s;
-	}
-	.float-badge:hover {
-		border-color: var(--accent);
-		color: var(--accent);
-		background: rgba(0, 102, 176, 0.06);
-	}
-	@keyframes badge-bob {
-		0%, 100% { transform: translateY(0); }
-		50%       { transform: translateY(-5px); }
-	}
-
-	/* Hero text — spans left + center columns, below rings */
-	.hero-content {
-		grid-column: 1 / 3;
+	/* Hero text — left column, below logos */
+	.hero-text {
+		grid-column: 1;
 		grid-row: 3;
 		padding-top: 2.5rem;
 		max-width: 600px;
@@ -784,7 +663,7 @@
 		flex-wrap: wrap;
 	}
 
-	/* Stat cards — bottom right */
+	/* Stat cards — right column, below logos */
 	.hero-stats {
 		grid-column: 3;
 		grid-row: 3;
@@ -813,7 +692,6 @@
 		color: var(--accent);
 		letter-spacing: -0.04em;
 		line-height: 1;
-		display: inline;
 	}
 	.stat-suffix {
 		font-family: var(--font-head);
@@ -834,11 +712,32 @@
 			grid-template-rows: auto auto auto;
 			padding: 6rem 2rem 2rem;
 		}
-		.hero-rings-wrap { grid-column: 1; grid-row: 1; margin: 0 auto; }
-		.float-badges { display: none; }
-		.hero-content { grid-column: 1; grid-row: 2; justify-self: center; text-align: center; max-width: 100%; }
-		.hero-stats { grid-column: 1; grid-row: 3; flex-direction: row; width: 100%; align-self: auto; }
-		.stat-card { flex: 1; min-width: unset; text-align: center; align-items: center; }
+		.hero-logos-wrap {
+			grid-column: 1;
+			grid-row: 1;
+			gap: 1rem 1.5rem;
+			padding: 1rem 1.5rem;
+		}
+		.hero-text {
+			grid-column: 1;
+			grid-row: 2;
+			justify-self: center;
+			text-align: center;
+			max-width: 100%;
+		}
+		.hero-stats {
+			grid-column: 1;
+			grid-row: 3;
+			flex-direction: row;
+			width: 100%;
+			align-self: auto;
+		}
+		.stat-card {
+			flex: 1;
+			min-width: unset;
+			text-align: center;
+			align-items: center;
+		}
 	}
 
 	/* ── SECTIONS ── */

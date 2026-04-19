@@ -1,25 +1,26 @@
 /* ============================================================
    DESIGN TOKENS — Light Theme (default)
    ============================================================ */
-:root {
+:root,
+:root[data-theme="light"] {
 	/* Backgrounds — clean white */
 	--bg: #FFFFFF;
-	--bg-surface: #F8F8F6;
+	--bg-surface: #F7F7F5;
 	--bg-elevated: #FFFFFF;
 
 	/* Borders */
-	--border: #E8E8E0;
-	--border-light: #F0F0EC;
+	--border: #E5E5E0;
+	--border-light: #EEEEEA;
 
 	/* Text */
-	--text: #1A1A24;
-	--text-muted: #6B6B80;
-	--text-dim: #A8A8B8;
+	--text: #1A1A28;
+	--text-muted: #707088;
+	--text-dim: #B0B0C0;
 
 	/* Accent — refined blue */
 	--accent: #0066B0;
-	--accent-dim: rgba(0, 102, 176, 0.1);
-	--accent-hover: #005090;
+	--accent-dim: rgba(0, 102, 176, 0.08);
+	--accent-hover: #004C8A;
 
 	/* Fonts */
 	--font-head: 'Newsreader', Georgia, serif;
@@ -48,14 +49,14 @@
 	--bg: #0A0A0F;
 	--bg-surface: #111118;
 	--bg-elevated: #16161F;
-	--border: #1C1C26;
-	--border-light: #252530;
+	--border: #1C1C28;
+	--border-light: #252535;
 	--text: #F0F0F8;
 	--text-muted: #6868A0;
-	--text-dim: #4A4A60;
+	--text-dim: #484860;
 	--accent: #F97316;
 	--accent-dim: rgba(249, 115, 22, 0.12);
-	--accent-hover: #FBBF24;
+	--accent-hover: #FB923C;
 }
 
 /* ============================================================
@@ -176,27 +177,7 @@ code, pre {
 	background: var(--accent);
 }
 
-/* ============================================================
-   DIAGONAL GRID BACKGROUND
-   ============================================================ */
-@keyframes grid-drift {
-	0%   { background-position: 0 0; }
-	100% { background-position: 40px 40px; }
-}
-
-.grid-bg {
-	background-image:
-		repeating-linear-gradient(
-			45deg,
-			transparent,
-			transparent 39px,
-			rgba(255, 255, 255, 0.025) 39px,
-			rgba(255, 255, 255, 0.025) 40px
-		);
-	animation: grid-drift 20s linear infinite;
-}
-
-/* ── Orbit Animations ── */
+/* ── Orbit Animations (dark theme only) ── */
 @keyframes orbit-outer {
 	from { transform: rotate(0deg); }
 	to   { transform: rotate(360deg); }
